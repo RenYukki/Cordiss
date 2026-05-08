@@ -5,8 +5,8 @@
 4. Setup oluşturmak için `npm run dist` yazın. 
  
 ## How to Build?
-1.Download or copy this repo.
-2.Open terminal in your folder and type `npm install`.
-3.To start the app type  `npm start`.
-4.To create setup or binary `npm run dist`
+1. Download or copy this repo.
+2. Open terminal in your folder and type `npm install`.
+3. To start the app type  `npm start`.
+4. To create setup or binary `npm run dist`
 
