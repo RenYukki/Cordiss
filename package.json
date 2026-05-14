@@ -1,31 +1,48 @@
 {
   "name": "cordiss",
-  "version": "1.0.0",
+  "version": "1.0.3",
+  "description": "Discord client for regional restrictions",
   "main": "main.js",
+  "author": "RenYukki",
+  "license": "GPL-3.0-or-later",
   "scripts": {
     "start": "electron .",
-    "dist": "electron-builder"
+    "build": "electron-builder build --win --portable",
+    "publish": "electron-builder build --win --publish always"
   },
   "dependencies": {
-    "axios": "^1.6.0"
+    "axios": "^1.6.0",
+    "electron-updater": "^6.1.4"
   },
   "devDependencies": {
-    "electron": "^30.0.0",
-    "electron-builder": "^24.13.3"
+    "electron": "^28.0.0",
+    "electron-builder": "^24.6.4"
   },
   "build": {
-    "appId": "com.yukki.cordiss",
-    "productName": "Cordiss Client",
-    "files": [
-      "main.js",
-      "node_modules/**/*",
-      "package.json",
-      "icon.ico"
-    ],
-    "asar": true,
+    "appId": "com.renyukki.cordiss",
+    "productName": "Cordiss",
+    "directories": {
+      "output": "dist"
+    },
     "win": {
-      "target": ["nsis"],
+      "target": [
+        "nsis"
+      ],
       "icon": "icon.ico"
-    }
+    },
+    "nsis": {
+    "oneClick": true,
+    "allowToChangeInstallationDirectory": false,
+    "perMachine": false,
+    "createDesktopShortcut": true,
+    "runAfterFinish": true
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "Renyukki",
+        "repo": "Cordiss"
+      }
+    ]
   }
 }
