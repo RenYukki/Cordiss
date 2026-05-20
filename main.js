@@ -55,24 +55,57 @@ const server = net.createServer((clientSocket) => {
         }
     });
 });
-server.listen(PROXY_PORT, '127.0.0.1');
+server.listen(PROXY_PORT, '127.0.0.1', () => {
+    console.log('Proxy server started');
+});
+
+server.on('error', (err) => {
+
+    if (err.code === 'EADDRINUSE') {
+
+        console.log('Proxy zaten çalışıyor.');
+
+    } else {
+
+        console.error(err);
+    }
+});
 
 function createWindow() {
     const currentVersion = app.getVersion();
     
     const win = new BrowserWindow({
-        width: 1200,
-        height: 800,
-        // BAŞLIKTA VERSİYON GÖSTERİMİ:
-        title: `Cordiss v${currentVersion}`, 
-        icon: __dirname + '/icon.ico',
-        autoHideMenuBar: true,
-        webPreferences: {
-            nodeIntegration: false,
-            contextIsolation: true,
-            preload: __dirname + '/preload.js'
+    width: 1200,
+    height: 800,
+    backgroundColor: '#292b2f', //beyaz ekran sorunu fix
+    show: false,
+    paintWhenInitiallyHidden: true,
+    title: `Cordiss v${currentVersion}`,
+    icon: __dirname + '/icon.ico',
+    autoHideMenuBar: true,
+    webPreferences: {
+        nodeIntegration: false,
+        contextIsolation: true,
+        preload: __dirname + '/preload.js'
         }
     });
+
+    //beyaz ekran sorunu fix
+    win.loadURL(`data:text/html,
+    <style>
+    body{
+        margin:0;
+        background:#292b2f;
+    }
+    </style>
+    <body></body>
+    `);
+
+    //beyaz ekran sorunu fix
+    win.once('ready-to-show', () => {
+        win.show();
+    });
+
 
     // Discord başlığı değiştirmeye çalışırsa engelle ve kendi başlığımızı koru
     win.on('page-title-updated', (e) => {
@@ -142,7 +175,7 @@ function createWindow() {
                         <div id="cordiss-support-pill"></div>
                         <div class="cordiss-tooltip">Destek Sunucusu</div>
                         <div class="listItemWrapper__91816">
-                            <div style="width: 40px; height: 40px; cursor: pointer; background-color: #23a559; color: white; display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: 0.2s;" onmouseover="this.style.borderRadius='30%'" onmouseout="this.style.borderRadius='50%'">
+                            <div style="width: 40px; height: 40px; cursor: pointer; background-color: #23a559; color: white; display: flex; align-items: center; justify-content: center; border-radius: 12px; transition: 0.2s;" onmouseover="this.style.borderRadius='30%'" onmouseout="this.style.borderRadius='50%'">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm1 15h-2v-2h2v2zm1.007-5.541l-.81.682c-.628.53-1.197 1.259-1.197 2.859h-2c0-2.031.905-3.328 1.959-4.216l.813-.685C12.443 9.534 13 9.135 13 8.5c0-.827-.673-1.5-1.5-1.5S10 7.673 10 8.5H8c0-1.93 1.57-3.5 3.5-3.5S15 6.57 15 8.5c0 1.206-.671 2.051-1.993 2.959z"/></svg>
                             </div>
                         </div>\`;
@@ -157,6 +190,32 @@ function createWindow() {
     });
 }
 
+const gotTheLock = app.requestSingleInstanceLock();
+
+if (!gotTheLock) {
+
+    // Zaten açıksa yeni açılanı kapat
+    app.quit();
+
+} else {
+
+    app.on('second-instance', () => {
+
+        // Açık olan pencereyi öne getir
+        const allWindows = BrowserWindow.getAllWindows();
+
+        if (allWindows.length > 0) {
+
+            const win = allWindows[0];
+
+            if (win.isMinimized())
+                win.restore();
+
+            win.focus();
+        }
+    });
+
+}
 // --- APP OLAYLARI VE GÜNCELLEME ---
 app.whenReady().then(() => {
     createWindow();

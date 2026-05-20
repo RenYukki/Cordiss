@@ -1,6 +1,6 @@
 {
   "name": "cordiss",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Discord client for regional restrictions",
   "main": "main.js",
   "author": "RenYukki",
@@ -8,7 +8,8 @@
   "scripts": {
     "start": "electron .",
     "build": "electron-builder build --win --portable",
-    "publish": "electron-builder build --win --publish always"
+    "publish": "electron-builder build --win --publish always",
+    "dist": "electron-builder"
   },
   "dependencies": {
     "axios": "^1.6.0",
