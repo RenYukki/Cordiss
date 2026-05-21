@@ -10,6 +10,6 @@
 3. To start the app type  `npm start`.
 4. To create setup or binary `npm run dist`
 
-Yardım / öneri / bug için discord sunucumuz: **https://discord.gg/UQSSTUytjt**
+Yardım / öneri / bug için discord sunucumuz: **https://discord.gg/fX9cJu8Sew**
 
-Our discord server for help / suggestion / bug: **https://discord.gg/UQSSTUytjt**
+Our discord server for help / suggestion / bug: **https://discord.gg/fX9cJu8Sew**

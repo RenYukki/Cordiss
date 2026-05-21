@@ -179,7 +179,7 @@ function createWindow() {
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm1 15h-2v-2h2v2zm1.007-5.541l-.81.682c-.628.53-1.197 1.259-1.197 2.859h-2c0-2.031.905-3.328 1.959-4.216l.813-.685C12.443 9.534 13 9.135 13 8.5c0-.827-.673-1.5-1.5-1.5S10 7.673 10 8.5H8c0-1.93 1.57-3.5 3.5-3.5S15 6.57 15 8.5c0 1.206-.671 2.051-1.993 2.959z"/></svg>
                             </div>
                         </div>\`;
-                    supContainer.onclick = () => { window.location.href = 'https://discord.gg/UQSSTUytjt'; };
+                    supContainer.onclick = () => { window.location.href = 'https://discord.gg/fX9cJu8Sew'; };
                     separator.insertAdjacentElement('afterend', supContainer);
                 };
                 const observer = new MutationObserver(() => injectButtons());
