@@ -6,6 +6,13 @@ const net = require('net');
 const PROXY_PORT = 12345;
 const dnsCache = {};
 
+const os = require('os');
+
+const platform = os.platform();
+
+
+
+
 // Donanım ve Medya Bayrakları
 app.commandLine.appendSwitch('enable-media-stream');
 app.commandLine.appendSwitch('autoplay-policy', 'no-user-gesture-required');
@@ -81,7 +88,7 @@ function createWindow() {
     show: false,
     paintWhenInitiallyHidden: true,
     title: `Cordiss v${currentVersion}`,
-    icon: __dirname + '/icon.ico',
+    icon: __dirname + '/icon.png',
     autoHideMenuBar: true,
     webPreferences: {
         nodeIntegration: false,
@@ -135,8 +142,17 @@ function createWindow() {
         proxyRules: `http://127.0.0.1:${PROXY_PORT}`,
         proxyBypassRules: '<local>'
     }).then(() => {
-        const userAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36';
-        win.loadURL('https://discord.com/app', { userAgent: userAgent });
+        let userAgent;
+
+        if (platform === 'win32') {
+            userAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124.0.0.0 Safari/537.36';
+        } else if (platform === 'linux') {
+            userAgent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/124.0.0.0 Safari/537.36';
+        } else {
+            userAgent = 'Mozilla/5.0';
+        }
+        session.defaultSession.setUserAgent(userAgent);
+        win.loadURL('https://discord.com/app', { userAgent });
     });
 
     // Destek butonu CSS ve JS
