@@ -1,6 +1,6 @@
 {
   "name": "cordiss",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Discord client for regional restrictions",
   "main": "main.js",
   "author": {
