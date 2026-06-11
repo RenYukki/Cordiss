@@ -13,3 +13,5 @@
 Yardım / öneri / bug için discord sunucumuz: **https://discord.gg/fX9cJu8Sew**
 
 Our discord server for help / suggestion / bug: **https://discord.gg/fX9cJu8Sew**
+
+renyukki.github.io/CordissWebsite/
