@@ -19,8 +19,6 @@
 
 ---
 
-## 🇹🇷 Türkçe
-
 ### 🤔 Kimler Neden Kullanmalı?
 Cordiss; Yayıncılar, Yazılımcılar, Oyuncular ve VPN/DNS/WARP gibi harici sistemlerle uğraşmadan Discord'a kesintisiz erişmek isteyen herkes için tasarlanmıştır.
 
