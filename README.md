@@ -1,5 +1,10 @@
 ## CORDISS - Discord Client
 
+### Windows
+[![Download](https://img.shields.io/badge/Windows-Download-blue?style=for-the-badge&logo=windows)](https://github.com/RenYukki/Cordiss/releases/download/v1.0.8/Cordiss-Setup-1.0.8.exe)
+
+### Linux
+[![Download](https://img.shields.io/badge/Linux-Download-yellow?style=for-the-badge&logo=linux)](https://github.com/RenYukki/Cordiss/releases/download/v1.0.8/Cordiss-1.0.8.AppImage)
 **Discorda erişim engellerine takılmadan bağlanmanızı sağlayan client.**
 
 <img width="800" height="450" alt="teaser" src="https://github.com/user-attachments/assets/db2379fe-92f2-494f-b942-3a3276bbbc8a" />
@@ -14,13 +19,6 @@ Oyun oynarken Ping/lag/Robot musun?/Bağlanılamıyor/vpn tespit edildi gibi pro
 
 Detaylı bilgi için : **https://renyukki.github.io/CordissWebsite/**
 
-## İndir
-
-### Windows
-[![Download](https://img.shields.io/badge/Windows-Download-blue?style=for-the-badge&logo=windows)](https://github.com/RenYukki/Cordiss/releases/download/v1.0.8/Cordiss-Setup-1.0.8.exe)
-
-### Linux
-[![Download](https://img.shields.io/badge/Linux-Download-yellow?style=for-the-badge&logo=linux)](https://github.com/RenYukki/Cordiss/releases/download/v1.0.8/Cordiss-1.0.8.AppImage)
 
 ## Nerdler için / For nerds:
 
