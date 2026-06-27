@@ -65,25 +65,25 @@ Projeyi yerel bilgisayarınızda derlemek veya geliştirmek için aşağıdaki a
 
 To build or develop the project locally, follow these steps:
 
-  1. Clone or download this repository:
+1. Clone or download this repository:
   
-    ```Bash
+  ```Bash
     git clone [https://github.com/RenYukki/Cordiss.git](https://github.com/RenYukki/Cordiss.git)
     cd Cordiss
 
-  2. Install the required dependencies:
+2. Install the required dependencies:
      
-    ```Bash
-    npm install
+  ```Bash
+  npm install
 
-  3. Start the application in development mode:
+3. Start the application in development mode:
      
-    ```Bash
-    npm start
+  ```Bash
+  npm start
 
-  4. To generate the installer or production binary:
+4. To generate the installer or production binary:
      
-    ```Bash
+  ```Bash
     npm run dist
 
 💬 İletişim & Destek / Contact & Support
