@@ -1,11 +1,11 @@
 {
   "name": "cordiss",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Discord client for regional restrictions",
   "main": "main.js",
   "author": {
-  "name": "RenYukki",
-  "email": "renyukki@example.com"
+    "name": "RenYukki",
+    "email": "renyukki@example.com"
   },
   "license": "GPL-3.0-or-later",
   "homepage": "https://renyukki.github.io/CordissWebsite/",
@@ -15,50 +15,44 @@
     "dist:win": "electron-builder --win",
     "dist:linux": "electron-builder --linux"
   },
-
   "dependencies": {
     "axios": "^1.6.0",
     "electron-updater": "^6.1.4"
   },
-
   "devDependencies": {
-    "electron": "^28.0.0",
-    "electron-builder": "^24.6.4"
+    "electron": "^28.3.3",
+    "electron-builder": "^24.13.3"
   },
-
   "build": {
     "appId": "com.renyukki.cordiss",
     "productName": "Cordiss",
-
     "directories": {
       "output": "dist"
     },
-
     "files": [
       "**/*"
     ],
-
     "icon": "icon.png",
-
     "win": {
-      "target": ["nsis"],
+      "target": [
+        "nsis"
+      ],
       "icon": "icon.png"
     },
-
     "linux": {
-      "target": ["AppImage"],
+      "target": [
+        "AppImage"
+      ],
       "maintainer": "RenYukki <renyukki@example.com>",
       "category": "Utility",
       "icon": "icon.png"
-  },
-
+    },
     "nsis": {
       "oneClick": true,
       "allowToChangeInstallationDirectory": false,
       "createDesktopShortcut": true,
       "runAfterFinish": true
     },
-
     "publish": [
       {
         "provider": "github",
