@@ -62,7 +62,7 @@ Projeyi yerel bilgisayarınızda derlemek veya geliştirmek için aşağıdaki a
 
     npm run dist
 
-🇬🇧 How to Build?
+### 🇬🇧 How to Build?
 
 To build or develop the project locally, follow these steps:
 
