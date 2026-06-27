@@ -1,4 +1,4 @@
-# CORDISS - Discord Client
+# 🛖 CORDISS - Discord Client
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/db2379fe-92f2-494f-b942-3a3276bbbc8a" alt="Cordiss Teaser" width="800" style="border-radius: 8px;">
