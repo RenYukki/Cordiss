@@ -41,48 +41,49 @@ Diğer bypass yöntemlerinin aksine **tamamen izole çalışır**. Sadece kendi 
 Projeyi yerel bilgisayarınızda derlemek veya geliştirmek için aşağıdaki adımları takip edebilirsiniz:
 
 1. Bu depoyu klonlayın veya indirin:
+   
    ```bash
    git clone [https://github.com/RenYukki/Cordiss.git](https://github.com/RenYukki/Cordiss.git)
    cd Cordiss
 
-    Gerekli bağımlılıkları yükleyin:
-    Bash
-
+2. Gerekli bağımlılıkları yükleyin:
+   
+    ```Bash
     npm install
 
-    Uygulamayı geliştirme modunda başlatın:
-    Bash
-
+3. Uygulamayı geliştirme modunda başlatın:
+     
+    ```Bash
     npm start
 
-    Kurulum dosyasını (Setup/Binary) oluşturmak için:
-    Bash
-
+4. Kurulum dosyasını (Setup/Binary) oluşturmak için:
+    
+    ```Bash
     npm run dist
 
 ### 🇬🇧 How to Build?
 
 To build or develop the project locally, follow these steps:
 
-    Clone or download this repository:
-    Bash
-
+  1. Clone or download this repository:
+  
+    ```Bash
     git clone [https://github.com/RenYukki/Cordiss.git](https://github.com/RenYukki/Cordiss.git)
     cd Cordiss
 
-    Install the required dependencies:
-    Bash
-
+  2. Install the required dependencies:
+     
+    ```Bash
     npm install
 
-    Start the application in development mode:
-    Bash
-
+  3. Start the application in development mode:
+     
+    ```Bash
     npm start
 
-    To generate the installer or production binary:
-    Bash
-
+  4. To generate the installer or production binary:
+     
+    ```Bash
     npm run dist
 
 💬 İletişim & Destek / Contact & Support
